@@ -1,0 +1,70 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">	 
+	 <link rel="stylesheet" type="text/css" href="css/estilo.css">	 	
+	  <script src="js/main.js"></script>
+		
+	</head>
+	<body>
+
+<div id="contenido">
+
+<h2>CALCULO</h2>
+<div id="error_form"></div>
+
+
+ <div class="form-group">
+ 	
+    <label for="nom_prod">Nombre del producto</label>
+    <input type="text" class="form-control" id="nom_prod" onkeypress="return valida(event)" >
+  </div>
+   <div class="form-group">
+  
+    <label for="cantidad">Cantidad</label>
+    <input type="text" class="form-control" id="cantidad" onkeypress="return valida(event)" >
+  </div>
+   <div class="form-group">
+  
+    <label for="precio">Precio</label>
+    <input type="text" class="form-control" id="precio" onkeypress="return valida(event)" >
+  </div>
+   <div class="form-group">
+  
+    <label for="descuento">Descuento</label>
+    <input type="text" class="form-control" id="descuento" onkeypress="return valida(event)" >
+  </div>
+
+   
+
+  <div class="form-group">
+	<button type="button" class="btn btn-primary" onclick="calculoIVA()">Calcular</button>
+	<button type="button" class="btn btn-success" onclick="limpiar()">Limpiar</button>
+</div>
+  <h2>RESULTADO</h2>
+
+     <div class="form-group">
+    <label for="res_neto">Neto</label>
+    <input type="text" class="form-control" id="res_neto" readonly>
+  </div>
+
+     <div class="form-group">
+    <label for="res_iva">Iva</label>
+    <input type="text" class="form-control" id="res_iva" readonly >
+  </div>
+
+    <div class="form-group">
+    <label for="res_total">Total</label>
+    <input type="text" class="form-control" id="res_total" readonly >
+  </div>
+
+
+
+</div>	
+
+
+
+	
+
+	</body>
+	<footer></footer>
+</html>
