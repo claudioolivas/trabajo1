@@ -29,7 +29,7 @@ function calculoIVA(){
 if(prod==''){  errores+='\n-Campo Nombre del Producto vacio';}
 if(cant==''){  errores+='\n-Campo Cantidad vacio';}
 if(precio==''){  errores+='\n-Campo Precio vacio';}
-if(desc==''){  errores+='\n-Campo Descuentovacio';}
+if(desc==''){  errores+='\n-Campo Descuento vacio';}
 
 if(errores!=''){
 alert('ERRORES\n'+errores);
