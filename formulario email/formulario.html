@@ -1,0 +1,87 @@
+!<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>formulario contacto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"  href="css/bootstrap.css" />
+    <link rel="stylesheet"  href="css/bootstrap-theme.css" />
+    <link rel="stylesheet"  href="css/estilo.css" />
+  
+</head>
+<body>
+    
+        <div class="container">
+                <div class="row">
+                    
+                    <div class=" col-lg-1 col-md-2 col-sm-4 col-xs-12"> </div>
+                    <div class="plomo col-lg-10 col-md-2 col-sm-4 col-xs-12">
+                            <div class="panel panel-default">
+                            <div class="panel-heading">Formulario de email</div>
+                            <div class="panel-body">
+                             
+                              
+                            <form class="form-horizontal">
+                                    <div class="form-group">
+                                      <label for="txt_firts " class="col-sm-1" >nombre</label>
+                                      <div class="col-sm-5">
+                                           <input type="text" class="form-control " id="nombre" maxlength="40" placeholder="">
+                                      </div>
+   
+                                      <label for="txt_lastname " class="col-sm-1" >rut</label>
+                                      <div class="col-sm-5">
+                                           <input type="text" class="form-control " id="rut" oninput="checkRut(this)" maxlength="10" onkeypress="return validasolonumero(event)">
+                                      </div>
+
+                                    </div>
+
+                                      <div class="form-group">
+                                      <label for="txt_firts " class="col-sm-1" >email</label>
+                                      <div class="col-sm-5">
+                                           <input type="text" class="form-control " id="email" placeholder="example@gmail.com"  onkeyup="validarEmail(this)">
+                                      </div>
+   
+                                      <label for="fono " class="col-sm-1" >telefono</label>
+                                      <div class="col-sm-5">
+                                           <input type="text" class="form-control " id="fono" maxlength="8" placeholder="ejem :89827603" onkeypress="return validasolonumero(event)">
+                                      </div>
+                             
+                                    </div>
+
+     
+   
+                                    
+                                     
+                             
+                                     <div class="form-group">
+                                        <label for="sel1" class="col-sm-1 control-label">mensaje</label>
+                                        <div class="col-sm-11"> 
+                                        <textarea class="form-control" id="mensaje" rows="4" maxlength="200"></textarea>
+                                    </div>
+                                   
+                                        <button type="submit" class="btn btn-secondary pull-right" onclick="limpiar()">Limpiar</button>
+                                    <button type="button" class="btn btn-success pull-right" onclick="enviar()">Enviar</button>
+
+                                    <div id="resultado" class="text-center"></div>
+                                </div>
+                                    </div>
+                                   
+                                    
+                                  </form>
+                              </div>
+
+                                  </form>
+                              </div>
+
+
+
+
+                    </div>
+                    </div>
+                    </div>
+                    <div class=" col-lg-1 col-md-2 col-sm-4 col-xs-12"> </div>
+                    <script src="js/main.js"></script>
+
+</body>
+</html>
