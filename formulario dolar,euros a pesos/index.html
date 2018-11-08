@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>clase java script
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/estilo.css" />
+
+
+  
+
+  <style>
+      .error{
+          color:coral;
+      }
+  </style>
+</head>
+<body>
+   
+    <div class="container">
+    
+         <div class="row ">
+            <div class="col-md-1"></div>
+              <div class="col-md-10">
+                  <h2>Transformar valores a pesos chilenos</h2>
+                  <div class="error" id="error_form text-cente">
+
+                  </div>
+                  <div class="d-block my-3">
+                 <div class="form-group">
+  <label for="sel1">Select moneda:</label>
+  <select class="form-control" id="sel1">
+    <option value="1">Euro</option>
+    <option value="2">Dolar</option>
+  </select>
+</div>
+
+            </div>
+                     
+              </div>
+             
+            </div>
+           
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+               
+                   <div class="form-group text-cente">
+                        <label for="">Valor</label>
+                        <input type="text" class="form-control"  id="valor" onkeypress="return validasolonumero(event)" maxlength="10">
+
+                     </div>
+
+                        <div class="form-group text-cente">
+
+                        <input type="button" class="btn btn-primary" value="Calcular" onclick="calcular2()">
+                        <input type="submit" class="btn btn-success" value="limpiar" onclick="limpiar()">
+
+                     </div>
+
+                     <h2>Resultado</h2>
+
+                     <div class="form-group text-cente">
+                        <label for=""></label>
+                        <input type="text" class="form-control"  id="pesos" readonly>
+   
+                     </div>
+
+                </div>
+                <div class="col-md-1 text-cente">
+
+                    </div>
+
+                    <div class="col-md-12 text-center error" id="error_form"></div>
+            </div>
+           
+         </div>
+
+    </div>
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
