@@ -5,9 +5,24 @@ function limpiar(){
     document.getElementById("valor").value="";
 document.getElementById("pesos").value="";
 
-
-
 }
+
+
+function move() {
+    var elem = document.getElementById("myBar"); 
+    var width = 1;
+    var id = setInterval(frame, 5);
+    function frame() {
+        if (width >= 100) {
+            clearInterval(id);
+        } else {
+            width++; 
+            elem.style.width = width + '%'; 
+        }
+    }
+}
+
+
 function validasolonumero(e){
     tecla = (document.all) ? e.keyCode : e.which;
 
@@ -29,15 +44,18 @@ var tipo = document.getElementById("sel1").value;
 
 if (tipo == 1) {
 
+
 var total =parseInt(document.getElementById("valor").value)*772;
 
-document.getElementById("pesos").value=total;
+setTimeout(function(){ document.getElementById("pesos").value=total; 
+}, 500);
+
 
 }else{
 
 var pes =parseInt(document.getElementById("valor").value)*675;
-
-document.getElementById("pesos").value=pes;
+setTimeout(function(){document.getElementById("pesos").value=pes;
+ }, 500);
 
 }
 
