@@ -1,0 +1,43 @@
+.verde{
+  background: green;
+  height: 100px;
+}
+.amarillo{
+    background: yellow;
+    height: 100px;
+}
+.rojo{
+   background: red;
+   height: 100px;
+}
+.plomo{
+
+    background: #fff;
+    height: 1000px;
+}
+canvas{
+
+    border-radius: 100px;
+  
+}
+video{
+    border-radius: 100px;
+    background: url('//img/175778dec08c936.jpg');
+}
+#espacio{
+    widows: auto;
+    height: 20px;
+}
+#buttonStart{
+    margin-left: 120px;
+}
+#buttonStop{
+    margin-left:33px;
+}
+.finsh {
+    margin-top: 20px;
+    margin-right: 20px;
+}
+#video1{
+
+}

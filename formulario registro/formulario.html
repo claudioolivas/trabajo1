@@ -1,0 +1,147 @@
+!<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>formulario contacto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"  href="css/bootstrap.css" />
+    <link rel="stylesheet"  href="css/bootstrap-theme.css" />
+    <link rel="stylesheet"  href="css/estilo.css" />
+    <link  rel="stylesheet" href="css/estiloscamara.css"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+   
+    <script src="js/mapa.js"></script>
+  
+</head>
+<body onload="initialize()">
+    
+        <div class="container">
+                <div class="row">
+                    
+                    <div class=" col-lg-1 col-md-2 col-sm-4 col-xs-12"> </div>
+                    <div class="plomo col-lg-10 col-md-2 col-sm-4 col-xs-12">
+                            <div class="panel panel-default">
+                            <div class="panel-heading">Formulario Registro</div>
+                            <div class="panel-body">
+                             
+                              
+                            <form class="form-horizontal">
+                                    <div class="form-group">
+                                      <label for="txt_firts " class="col-sm-1" >Nombres</label>
+                                      <div class="col-sm-5">
+                                           <input type="text" class="form-control " id="nombre" maxlength="40" placeholder="">
+                                      </div>
+   
+                                      <label for="apellidos " class="col-sm-1" >Apellidos</label>
+                                      <div class="col-sm-5">
+                                           <input type="text" class="form-control " id="apellidos" maxlength="40" >
+                                      </div>
+
+                                    </div>
+
+                                      <div class="form-group">
+                                      <label for="rut " class="col-sm-1" >Rut</label>
+                                      <div class="col-sm-5">
+                                           <input type="text" class="form-control " id="rut" placeholder="ejem: 18523517-3" maxlength="10"onkeypress="return validasolonumero(event)"  oninput="checkRut(this)">
+                                      </div>
+   
+                                      <label for="email " class="col-sm-1" >E-mail</label>
+                                      <div class="col-sm-5">
+                                           <input type="text" class="form-control " id="email" maxlength="30" placeholder="example@gmail.com"  onkeyup="validarEmail(this)">
+                                      </div>
+                             
+                                    </div>
+
+
+                                     <div class="form-group">
+                                            <label for="celular " class="col-sm-1" >Celular</label>
+                                            <div class="col-sm-5">
+                                                 <input type="text" class="form-control " id="celular" placeholder="ejem: 89827603"  maxlength="8">
+                                            </div>
+         
+                                            <label for="ciudad " class="col-sm-1" >Ciudad</label>
+                                            <div class="col-sm-5">
+                                                 <input type="text" class="form-control " id="ciudad" maxlength="15" >
+                                            </div>
+                                   
+                                          </div>
+                                          <div class="form-group">
+                                                <label for="direccion " class="col-sm-1" >Direccion</label>
+                                                <div class="col-sm-5">
+                                                     <input type="text" class="form-control " id="direccion" maxlength="50">
+                                                </div>
+             
+                                                <label for="latitud " class="col-sm-1" >Latitud</label>
+                                                <div class="col-sm-5">
+                                                     <input type="text" class="form-control " id="latitud" readonly placeholder="-37.462931">
+                                                </div>
+                                       
+                                              </div>
+                                              <div class="form-group">
+                                                    <label for="longitud " class="col-sm-1" >Longitud</label>
+                                                    <div class="col-sm-5">
+                                                         <input type="text" class="form-control " id="longitud" readonly placeholder="-72.360986" >
+                                                    </div>
+                 
+                                           
+                                                  </div>
+                                 
+                                     <label for="sel1" class=" control-label">Seleccione ubicacion en Google Maps</label>
+                                     <div id="map_canvas" style="width: auto; height: 300px;"></div>
+                                     
+                                     <div id ="espacio"> </div>
+                                     
+                                     <div class="form-group" id="video1">
+                                       
+                                        <label for="video " class="col-sm-1"  ></label>
+                                        <div class="col-sm-5">
+                                            <video id="video" poster="http://icons.iconarchive.com/icons/martz90/circle/512/camera-icon.png" autoplay="autoplay" style="width:auto; height:180px"  ></video>
+                                        </div>
+                                       
+                                          
+                                        <div class="form-group">
+                                           <input  for="canvas " class="col-sm-1 btn" type="button"  id="buttonSnap" value="Capturar" disabled="disabled" onclick="snapshot()" />
+                                            <div class="col-sm-5">
+                                                <canvas id="canvas" class="rounded-circle"  style="width:auto; height:180px"></canvas> </canvas>
+                                            </div>
+                                            
+                                                <input type="button" id="buttonStart" class="btn " value="Iniciar "  onclick="start()" />
+                                                <input type="button" id="buttonStop" class="btn" value="Detener" disabled="disabled" onclick="stop()" />
+    
+                                            
+                                          
+
+
+
+
+                                   
+                                    <button type="submit" class="finsh  btn btn-secondary pull-right" onclick="limpiar()">Limpiar</button>
+                                    <button type="button" class="finsh btn btn-success pull-right" onclick="enviar()">Enviar</button>
+
+                                    <div id="resultado" class="text-center"></div>
+                                </div>
+                                    </div>
+                                   
+                                    
+                                  </form>
+                              </div>
+
+                                  </form>
+                              </div>
+
+
+
+
+                    </div>
+                    </div>
+                    </div>
+                    <div class=" col-lg-1 col-md-2 col-sm-4 col-xs-12"> </div>
+                    <script src="js/main.js"></script>
+                    <script src="js/camara.js"></script>
+                    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANbiqmrcCEgAiZMGzP9EF-f7SIa8j-rJI&callback=initMap"></script>
+
+</body>
+</html>
