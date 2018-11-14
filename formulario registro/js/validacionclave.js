@@ -24,8 +24,40 @@ function seguridad_clave(clave){
  }   
  
  
- 
+ function snespc(clave){
+if(clave==""){
+ document.getElementById("resultado").innerHTML="";
+    return false;
+}
+
+  cuenta = clave.split(" ");
+
+var aa=parseInt(parseInt(cuenta.length)-1);
+  if(aa>=1){
+     var reem=clave.replace(" ", "");    
+     document.getElementById("clave2").value=reem;
+
+return false;
+  }
+ }
  function muestra_seguridad_clave(clave,formulario){
+
+  if(clave==""){
+    document.getElementById("resultado_seguridad").innerHTML="";
+    return false;
+  }
+  cuenta = clave.split(" ");
+
+var aa=parseInt(parseInt(cuenta.length)-1);
+  if(aa>=1){
+     var reem=clave.replace(" ", "");    
+     document.getElementById("clave1").value=reem;
+
+return false;
+  }
+   
+  
+
   document.getElementById("clave2").value="";
   document.getElementById("resultado").innerHTML="";
  
@@ -44,9 +76,9 @@ function seguridad_clave(clave){
   clasee='bg-info'; tipo='Alta';
  }
  else if(seguridad>=61 && seguridad<=80){
-  clasee='bg-primary'; tipo='Buena';
+  clasee='bg-success'; tipo='Buena';
  }else if(seguridad>81){
-   clasee='bg-success'; tipo='Super Buena';
+   clasee='bg-Supersuccess'; tipo='Super Buena';
  }
  
  
@@ -108,11 +140,16 @@ function seguridad_clave(clave){
  
  
  function comp_iguales(){
-   var pass1=document.getElementById("clave1").value;
+  var pass1=document.getElementById("clave1").value;
    var pass2=document.getElementById("clave2").value;
+  if(pass1=="" || pass2==""){
+document.getElementById("resultado").innerHTML="";
+return false;
+  }
+ 
  
    if(pass1==pass2){
-   document.getElementById("resultado").innerHTML="<p class='bg-success' style='padding: 10px;'>Correcto</p>";
+   document.getElementById("resultado").innerHTML="<p class='bg-success' style='padding: 10px;'>Contraseñas coinciden</p>";
  
    }else{
       document.getElementById("resultado").innerHTML="<p class='bg-danger'  style='padding: 10px;'>Las contraseñas no coinciden</p>";

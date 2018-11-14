@@ -113,29 +113,24 @@
                                                 <input type="button" id="buttonStart" class="btn " value="Iniciar "  onclick="start()" />
                                                 <input type="button" id="buttonStop" class="btn" value="Detener" disabled="disabled" onclick="stop()" />
     
-                                                <div id="contenido">
+                                                <div id="contenido" style="width:600px;margin:0 auto;margin-top: 38px;">
 
               
                                                     <form class="form-signin">
                                                         <label class="labelcontra" >Contraseña:</label>
-                                                     <input type="password"  name="clave" id="clave1" onkeyup="muestra_seguridad_clave(this.value, this.form);" class="form-control" placeholder="" > 
+                                                     <input class="form-control" style="width: 95%;" type="password" oncopy="return false" onpaste="return false"  name="clave" id="clave1" onkeyup="muestra_seguridad_clave(this.value, this.form);"  class="form-control" placeholder="" > 
                                                     <!--<i>seguridad:</i> <input name="seguridad" type="text" style="border: 0px; background-color:ffffff; text-decoration:italic;" onfocus="blur()"> -->
                                                     <br><label id="resultado_seguridad" style="width: 50%"></label>
                                                     <div></div>
                                                     <div></div>
                                                     <label class="labelcontra">Repetir Contraseña:</label> 
-                                                     <input type="password" id="clave2" onblur="comp_iguales();" class="form-control" placeholder="" >
+                                                     <input  class="form-control" style="width: 95%;" type="password" oncopy="return false" onpaste="return false" id="clave2" onkeyup="snespc(this.value);comp_iguales();"  class="form-control" placeholder="" >
                                                      <br> 
                                                     <label id="resultado" style="width: 50%"></label><br><br> 
-                                                    <div  id="captcha"   class="g-recaptcha" data-sitekey="6Lf9lXoUAAAAABbfl0T4MaLuuWaZjggFFxHEoi0s"></div>    </form>
+                                                   
+                                                   <div  style="width: 100%;margin-left:150;"> <div  id="captcha"   class="g-recaptcha" data-sitekey="6Lf9lXoUAAAAABbfl0T4MaLuuWaZjggFFxHEoi0s"></div> <div>   </form>
                                                     
                                                     </div>	
-                                                    
-                                          
-
-
-
-
                                    
                                     <button type="submit" class="finsh  btn btn-secondary pull-right" onclick="limpiar()">Limpiar</button>
                                     <button type="button" class="finsh btn btn-success pull-right" onclick="enviar()">Enviar</button>
