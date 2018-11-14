@@ -41,3 +41,29 @@ video{
 #video1{
 
 }
+#clave1{
+    width: 488px;
+
+    margin-left: 30px;
+}
+#clave2{
+    width: 488;
+    margin-left:30px;
+}
+.labelcontra{
+ 
+    margin-left: 30px;
+}
+#resultado_seguridad{
+    margin-left: 30px;
+}
+#resultado{
+    margin-left: 30px;
+}
+#capcha{
+
+    margin-left: 50px;
+}
+#captcha{
+    margin-left: 30px;
+}

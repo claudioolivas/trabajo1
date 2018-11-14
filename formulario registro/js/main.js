@@ -64,9 +64,9 @@ function validarEmail(elemento){
     var regex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
     
     if (!regex.test(texto)) {
-        document.getElementById("resultado").innerHTML = "Correo invalido";
+        document.getElementById("resultado1").innerHTML = "Correo invalido";
     } else {
-      document.getElementById("resultado").innerHTML = "";
+      document.getElementById("resultado1").innerHTML = "";
     }
   
   }
@@ -80,19 +80,19 @@ function validarEmail(elemento){
    var r5=  document.getElementById("mensaje").value;
   
   if(r1==""){
-    document.getElementById("resultado").innerHTML = "inserte rut";
+    document.getElementById("resultado11").innerHTML = "inserte rut";
   }
   else if(r2==""){
-    document.getElementById("resultado").innerHTML = "inserte fono";
+    document.getElementById("resultado1").innerHTML = "inserte fono";
   }
   else if(r3==""){
-    document.getElementById("resultado").innerHTML = "inserte email";
+    document.getElementById("resultado1").innerHTML = "inserte email";
   }
   else if(r4==""){
-    document.getElementById("resultado").innerHTML = "inserte nombre";
+    document.getElementById("resultado1").innerHTML = "inserte nombre";
   }
   else if(r5==""){
-    document.getElementById("resultado").innerHTML = "inserte mensaje";
+    document.getElementById("resultado1").innerHTML = "inserte mensaje";
   }
   else{
       alert("correo enviado");
